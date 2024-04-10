@@ -7,7 +7,56 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            
+            <Label
+                Text="Valor da refeição"/>
+            <Entry
+                x:Name="ValueEntry"
+                Placeholder="Digite aqui o valor da renda"/>        
+
+            <Label
+                Text="Gorjeta: "/>
+            <Label
+                Text="R$ 0.00"
+                x:Name="TipLabel"/>     
+
+            <Label
+                Text="Total: "/>
+            <Label
+                Text="R$ 0.00"
+                x:Name="TotalLabel"/>
+
+            <Label
+                Text="Porcentagem da gorjeta"/>
+            <Label
+                Text="0%"
+                x:Name="TipPorcentagemLabel"/>
+
+            <Slider
+                x:Name="TipPercentageSlider"
+                Minimum="0"
+                Maximum="100"
+                Value="15"
+                ValueChanged="OnTipPercentageSlider_ValueChanged"/>
+
+            <Button
+                x:Name="Percentage15Button"
+                Text="15%"
+                Clicked="Percentage15Button_Clicked"/>
+
+            <Button
+                x:Name="Percentage30Button"
+                Text="30%"
+                Clicked="Percentage30Button_Clicked"/>
+
+            <Button
+                x:Name="RoundDownButton"
+                Text="Arredondar para baixo"
+                Clicked="RoundDownButton_Clicked"/>
+
+            <Button
+                x:Name="RoundUpButton"
+                Text="Arredondar para cima"
+                Clicked="RoundUpButton_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
